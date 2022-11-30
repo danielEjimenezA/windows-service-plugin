@@ -59,7 +59,7 @@ class WindowsServicePluginTask extends DefaultTask {
         // Populate classpath with jar task outputs and runtime dependencies.
         project.afterEvaluate {
             automaticClasspath = automaticClasspath + project.files(project.tasks[JavaPlugin.JAR_TASK_NAME])
-            automaticClasspath = automaticClasspath + project.configurations[JavaPlugin.RUNTIME_CONFIGURATION_NAME]
+            automaticClasspath = automaticClasspath + project.configurations[JavaPlugin.RUNTIME_ELEMENTS_CONFIGURATION_NAME]
         }
     }
 
